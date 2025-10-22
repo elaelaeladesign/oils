@@ -57,7 +57,7 @@
     .content {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       gap: 2rem;
       max-width: 1000px;
@@ -88,9 +88,21 @@
       margin-bottom: 0.5rem;
     }
 
-    .oil-text p {
-      font-size: 1rem;
-      margin: 0.5rem 0;
+    .oil-text h3 {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .oil-text ul {
+      margin: 0.5rem 0 1rem 1.2rem;
+      padding-left: 1rem;
+    }
+
+    .oil-text li {
+      margin-bottom: 0.4rem;
     }
 
     @media (max-width: 768px) {
@@ -101,7 +113,7 @@
       }
       .content {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
       }
       .oil-image {
         order: -1;
@@ -111,102 +123,237 @@
 </head>
 <body>
 
-  <!-- SVG Grafik oben -->
   <img src="images/blatt.svg" alt="Leaf Graphic" class="top-graphic">
-
   <h1>Essential Oils – doTERRA Guide</h1>
 
-  <!-- 1: Blue Block -->
+  <!-- 1: Wild Orange -->
   <section class="blue-block">
     <div class="content">
       <div class="oil-image"><img src="images/wild-orange.jpg" alt="Wild Orange"></div>
       <div class="oil-text">
         <h2>Wild Orange</h2>
-        <p><strong>What it does:</strong> Uplifts mood and boosts energy with a bright, citrus aroma.</p>
-        <p><strong>How to use:</strong> Diffuse for positivity or add a drop to your water for a refreshing twist.</p>
+
+        <h3>Main Effects:</h3>
+        <ul>
+          <li><strong>Energizing and uplifting:</strong> Promotes positivity, motivation, and balance.</li>
+          <li><strong>Cleansing and purifying:</strong> Supports natural detox and purifies air and surfaces.</li>
+          <li><strong>Immune support:</strong> Contains antioxidants (limonene) that strengthen the immune system.</li>
+          <li><strong>Soothing and relaxing:</strong> Reduces stress while maintaining energy.</li>
+        </ul>
+
+        <h3>Common Uses:</h3>
+        <ul>
+          <li><strong>Aromatically:</strong> Diffuse or inhale directly for a mood boost.</li>
+          <li><strong>Topically:</strong> Apply diluted to wrists or temples for freshness and focus.</li>
+          <li><strong>Internally:</strong> Add 1–2 drops to water or food for flavor and detox support.</li>
+          <li><strong>Household:</strong> Mix with water to clean surfaces and freshen air.</li>
+        </ul>
+
+        <h3>Caution:</h3>
+        <ul>
+          <li>Avoid sunlight or UV for 12h after topical use (photosensitive).</li>
+          <li>Always dilute before applying to skin.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 2: Normal Background -->
+  <!-- 2: ZenGest -->
   <section>
     <div class="content">
       <div class="oil-text">
         <h2>ZenGest</h2>
-        <p><strong>What it does:</strong> Supports digestion and eases stomach discomfort.</p>
-        <p><strong>How to use:</strong> Massage on the abdomen with carrier oil or inhale after meals.</p>
+        <h3>Main Effects:</h3>
+        <ul>
+          <li>Supports healthy digestion and reduces bloating.</li>
+          <li>Calms occasional stomach discomfort.</li>
+          <li>Soothes nausea and travel sickness.</li>
+        </ul>
+
+        <h3>Common Uses:</h3>
+        <ul>
+          <li><strong>Aromatically:</strong> Inhale after meals for digestive comfort.</li>
+          <li><strong>Topically:</strong> Massage on abdomen with carrier oil.</li>
+          <li><strong>Internally:</strong> Add 1 drop to water or tea after a heavy meal.</li>
+        </ul>
+
+        <h3>Caution:</h3>
+        <ul>
+          <li>Use diluted for sensitive skin.</li>
+          <li>Not recommended during pregnancy without consultation.</li>
+        </ul>
       </div>
       <div class="oil-image"><img src="images/zengest.jpg" alt="ZenGest"></div>
     </div>
   </section>
 
-  <!-- 3: Blue Block -->
+  <!-- 3: Citronella -->
   <section class="blue-block">
     <div class="content">
       <div class="oil-image"><img src="images/citronella.jpg" alt="Citronella"></div>
       <div class="oil-text">
         <h2>Citronella</h2>
-        <p><strong>What it does:</strong> Naturally repels insects and purifies the air.</p>
-        <p><strong>How to use:</strong> Diffuse outdoors or apply diluted to skin before going outside.</p>
+        <h3>Main Effects:</h3>
+        <ul>
+          <li>Natural insect repellent.</li>
+          <li>Purifies and refreshes air.</li>
+          <li>Uplifts mood and promotes clear thinking.</li>
+        </ul>
+
+        <h3>Common Uses:</h3>
+        <ul>
+          <li><strong>Aromatically:</strong> Diffuse outdoors to keep insects away.</li>
+          <li><strong>Topically:</strong> Apply diluted before spending time outside.</li>
+          <li><strong>Household:</strong> Add to cleaning solutions for freshness.</li>
+        </ul>
+
+        <h3>Caution:</h3>
+        <ul>
+          <li>Always dilute before topical use.</li>
+          <li>Avoid contact with eyes or sensitive areas.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 4: Normal Background -->
+  <!-- 4: Peppermint -->
   <section>
     <div class="content">
       <div class="oil-text">
         <h2>Peppermint</h2>
-        <p><strong>What it does:</strong> Improves focus and refreshes mind and body.</p>
-        <p><strong>How to use:</strong> Inhale for alertness or apply to temples for a cooling effect.</p>
+        <h3>Main Effects:</h3>
+        <ul>
+          <li>Boosts focus and energy.</li>
+          <li>Relieves tension and clears airways.</li>
+          <li>Cools and soothes the body.</li>
+        </ul>
+
+        <h3>Common Uses:</h3>
+        <ul>
+          <li><strong>Aromatically:</strong> Inhale to wake up or feel alert.</li>
+          <li><strong>Topically:</strong> Apply to temples, neck, or chest with carrier oil.</li>
+          <li><strong>Internally:</strong> Add a drop to tea or water for digestive support.</li>
+        </ul>
+
+        <h3>Caution:</h3>
+        <ul>
+          <li>Keep away from eyes.</li>
+          <li>Use diluted on sensitive skin.</li>
+        </ul>
       </div>
       <div class="oil-image"><img src="images/peppermint.jpg" alt="Peppermint"></div>
     </div>
   </section>
 
-  <!-- 5: Blue Block -->
+  <!-- 5: Lavender -->
   <section class="blue-block">
     <div class="content">
       <div class="oil-image"><img src="images/lavender.jpg" alt="Lavender"></div>
       <div class="oil-text">
         <h2>Lavender</h2>
-        <p><strong>What it does:</strong> Promotes calm, supports sleep, and soothes skin.</p>
-        <p><strong>How to use:</strong> Diffuse before bed or apply to pulse points for relaxation.</p>
+        <h3>Main Effects:</h3>
+        <ul>
+          <li>Promotes relaxation and calmness.</li>
+          <li>Supports restful sleep.</li>
+          <li>Soothes skin and minor irritations.</li>
+        </ul>
+
+        <h3>Common Uses:</h3>
+        <ul>
+          <li><strong>Aromatically:</strong> Diffuse before bed for better sleep.</li>
+          <li><strong>Topically:</strong> Apply to temples, neck, or irritated skin areas.</li>
+          <li><strong>Household:</strong> Add to laundry or pillows for a calming scent.</li>
+        </ul>
+
+        <h3>Caution:</h3>
+        <ul>
+          <li>Use diluted for sensitive skin.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 6: Normal Background -->
+  <!-- 6: Tea Tree -->
   <section>
     <div class="content">
       <div class="oil-text">
         <h2>Tea Tree</h2>
-        <p><strong>What it does:</strong> Cleanses skin and purifies air.</p>
-        <p><strong>How to use:</strong> Apply diluted to blemishes or add to cleaning spray.</p>
+        <h3>Main Effects:</h3>
+        <ul>
+          <li>Purifies air and surfaces.</li>
+          <li>Supports skin health and clarity.</li>
+          <li>Promotes a clean, refreshed feeling.</li>
+        </ul>
+
+        <h3>Common Uses:</h3>
+        <ul>
+          <li><strong>Topically:</strong> Apply diluted to blemishes or scalp.</li>
+          <li><strong>Household:</strong> Add to cleaning sprays for antibacterial effect.</li>
+          <li><strong>Aromatically:</strong> Diffuse to cleanse the air.</li>
+        </ul>
+
+        <h3>Caution:</h3>
+        <ul>
+          <li>For external use only.</li>
+          <li>Keep away from children and eyes.</li>
+        </ul>
       </div>
       <div class="oil-image"><img src="images/tea-tree.jpg" alt="Tea Tree"></div>
     </div>
   </section>
 
-  <!-- 7: Blue Block -->
+  <!-- 7: OnGuard -->
   <section class="blue-block">
     <div class="content">
       <div class="oil-image"><img src="images/onguard.jpg" alt="OnGuard"></div>
       <div class="oil-text">
         <h2>OnGuard</h2>
-        <p><strong>What it does:</strong> Strengthens immune system and protects naturally.</p>
-        <p><strong>How to use:</strong> Diffuse during cold season or apply to feet daily.</p>
+        <h3>Main Effects:</h3>
+        <ul>
+          <li>Strengthens immune defenses.</li>
+          <li>Protects against seasonal threats.</li>
+          <li>Purifies air and surfaces.</li>
+        </ul>
+
+        <h3>Common Uses:</h3>
+        <ul>
+          <li><strong>Aromatically:</strong> Diffuse to cleanse the air.</li>
+          <li><strong>Topically:</strong> Apply diluted to soles of feet for protection.</li>
+          <li><strong>Household:</strong> Add to surface cleaner for disinfection.</li>
+        </ul>
+
+        <h3>Caution:</h3>
+        <ul>
+          <li>Use diluted on skin.</li>
+          <li>Avoid contact with eyes or sensitive areas.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 8: Normal Background -->
+  <!-- 8: Air -->
   <section>
     <div class="content">
       <div class="oil-text">
         <h2>Air</h2>
-        <p><strong>What it does:</strong> Supports clear breathing and refreshes the senses.</p>
-        <p><strong>How to use:</strong> Diffuse or apply to chest with carrier oil before bed.</p>
+        <h3>Main Effects:</h3>
+        <ul>
+          <li>Supports clear breathing and sinus relief.</li>
+          <li>Invigorates and cools body and mind.</li>
+          <li>Helps open airways naturally.</li>
+        </ul>
+
+        <h3>Common Uses:</h3>
+        <ul>
+          <li><strong>Aromatically:</strong> Diffuse for clear breathing and freshness.</li>
+          <li><strong>Topically:</strong> Rub on chest or back with carrier oil.</li>
+          <li><strong>Inhalation:</strong> Inhale directly before exercise or sleep.</li>
+        </ul>
+
+        <h3>Caution:</h3>
+        <ul>
+          <li>Keep away from eyes and mucous membranes.</li>
+        </ul>
       </div>
       <div class="oil-image"><img src="images/air.jpg" alt="Air"></div>
     </div>
