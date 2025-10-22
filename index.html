@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Essential Oils Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #f0e0d1;
+      --blue: #2f3954;
+      --accent: #f3af52;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--bg-main);
+      font-family: "Poppins", sans-serif;
+      color: #2f3954;
+      line-height: 1.6;
+    }
+
+    .top-graphic {
+      display: block;
+      width: 300px;
+      margin: 3rem auto 1.5rem auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: "Homemade Apple", cursive;
+      font-size: 2.5rem;
+      color: #2f3954;
+      margin-bottom: 3rem;
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 3rem 1.5rem;
+      margin: 2rem auto;
+      max-width: 1200px;
+    }
+
+    .blue-block {
+      background-color: var(--blue);
+      border-radius: 60px;
+      width: 80%;
+      color: #ffffff;
+      padding: 3rem 2rem;
+      margin: 2rem auto;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .oil-image {
+      flex: 1 1 300px;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .oil-image img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .oil-text {
+      flex: 1 1 400px;
+      max-width: 500px;
+    }
+
+    .oil-text h2 {
+      font-family: "Homemade Apple", cursive;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .oil-text p {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+
+    @media (max-width: 768px) {
+      section,
+      .blue-block {
+        width: 95%;
+        padding: 2rem 1rem;
+      }
+      .content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .oil-image {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SVG Grafik oben -->
+  <img src="images/blatt.svg" alt="Leaf Graphic" class="top-graphic">
+
+  <h1>Essential Oils – doTERRA Guide</h1>
+
+  <!-- 1: Blue Block -->
+  <section class="blue-block">
+    <div class="content">
+      <div class="oil-image"><img src="images/wild-orange.jpg" alt="Wild Orange"></div>
+      <div class="oil-text">
+        <h2>Wild Orange</h2>
+        <p><strong>What it does:</strong> Uplifts mood and boosts energy with a bright, citrus aroma.</p>
+        <p><strong>How to use:</strong> Diffuse for positivity or add a drop to your water for a refreshing twist.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2: Normal Background -->
+  <section>
+    <div class="content">
+      <div class="oil-text">
+        <h2>ZenGest</h2>
+        <p><strong>What it does:</strong> Supports digestion and eases stomach discomfort.</p>
+        <p><strong>How to use:</strong> Massage on the abdomen with carrier oil or inhale after meals.</p>
+      </div>
+      <div class="oil-image"><img src="images/zengest.jpg" alt="ZenGest"></div>
+    </div>
+  </section>
+
+  <!-- 3: Blue Block -->
+  <section class="blue-block">
+    <div class="content">
+      <div class="oil-image"><img src="images/citronella.jpg" alt="Citronella"></div>
+      <div class="oil-text">
+        <h2>Citronella</h2>
+        <p><strong>What it does:</strong> Naturally repels insects and purifies the air.</p>
+        <p><strong>How to use:</strong> Diffuse outdoors or apply diluted to skin before going outside.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4: Normal Background -->
+  <section>
+    <div class="content">
+      <div class="oil-text">
+        <h2>Peppermint</h2>
+        <p><strong>What it does:</strong> Improves focus and refreshes mind and body.</p>
+        <p><strong>How to use:</strong> Inhale for alertness or apply to temples for a cooling effect.</p>
+      </div>
+      <div class="oil-image"><img src="images/peppermint.jpg" alt="Peppermint"></div>
+    </div>
+  </section>
+
+  <!-- 5: Blue Block -->
+  <section class="blue-block">
+    <div class="content">
+      <div class="oil-image"><img src="images/lavender.jpg" alt="Lavender"></div>
+      <div class="oil-text">
+        <h2>Lavender</h2>
+        <p><strong>What it does:</strong> Promotes calm, supports sleep, and soothes skin.</p>
+        <p><strong>How to use:</strong> Diffuse before bed or apply to pulse points for relaxation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6: Normal Background -->
+  <section>
+    <div class="content">
+      <div class="oil-text">
+        <h2>Tea Tree</h2>
+        <p><strong>What it does:</strong> Cleanses skin and purifies air.</p>
+        <p><strong>How to use:</strong> Apply diluted to blemishes or add to cleaning spray.</p>
+      </div>
+      <div class="oil-image"><img src="images/tea-tree.jpg" alt="Tea Tree"></div>
+    </div>
+  </section>
+
+  <!-- 7: Blue Block -->
+  <section class="blue-block">
+    <div class="content">
+      <div class="oil-image"><img src="images/onguard.jpg" alt="OnGuard"></div>
+      <div class="oil-text">
+        <h2>OnGuard</h2>
+        <p><strong>What it does:</strong> Strengthens immune system and protects naturally.</p>
+        <p><strong>How to use:</strong> Diffuse during cold season or apply to feet daily.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8: Normal Background -->
+  <section>
+    <div class="content">
+      <div class="oil-text">
+        <h2>Air</h2>
+        <p><strong>What it does:</strong> Supports clear breathing and refreshes the senses.</p>
+        <p><strong>How to use:</strong> Diffuse or apply to chest with carrier oil before bed.</p>
+      </div>
+      <div class="oil-image"><img src="images/air.jpg" alt="Air"></div>
+    </div>
+  </section>
+
+</body>
+</html>
