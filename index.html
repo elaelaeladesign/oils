@@ -36,7 +36,7 @@
 
     section {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       flex-wrap: wrap;
       gap: 2rem;
@@ -73,9 +73,19 @@
     .oil-image img {
       width: 100%;
       max-width: 300px;
-      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      object-fit: cover;
     }
+
+    /* Organisch unterschiedliche Rundungen */
+    .oil-image img:nth-of-type(1) { border-radius: 50% 30% 60% 40% / 45% 50% 55% 50%; }
+    .oil-image img:nth-of-type(2) { border-radius: 35% 55% 40% 60% / 50% 45% 50% 55%; }
+    .oil-image img:nth-of-type(3) { border-radius: 60% 40% 50% 50% / 50% 55% 45% 50%; }
+    .oil-image img:nth-of-type(4) { border-radius: 45% 55% 60% 40% / 50% 50% 50% 50%; }
+    .oil-image img:nth-of-type(5) { border-radius: 50% 50% 40% 60% / 55% 45% 50% 50%; }
+    .oil-image img:nth-of-type(6) { border-radius: 40% 60% 50% 50% / 50% 50% 45% 55%; }
+    .oil-image img:nth-of-type(7) { border-radius: 55% 45% 50% 50% / 50% 55% 50% 45%; }
+    .oil-image img:nth-of-type(8) { border-radius: 50% 40% 55% 45% / 50% 50% 50% 50%; }
 
     .oil-text {
       flex: 1 1 400px;
@@ -105,15 +115,17 @@
       margin-bottom: 0.4rem;
     }
 
+    /* Mobile Version mit mehr Luft */
     @media (max-width: 768px) {
       section,
       .blue-block {
         width: 95%;
-        padding: 2rem 1rem;
+        padding: 3rem 2rem; /* mehr Abstand */
       }
       .content {
         flex-direction: column;
         text-align: left;
+        gap: 3rem; /* größere Lücken zwischen Bild und Text */
       }
       .oil-image {
         order: -1;
@@ -132,7 +144,6 @@
       <div class="oil-image"><img src="images/wild-orange.jpg" alt="Wild Orange"></div>
       <div class="oil-text">
         <h2>Wild Orange</h2>
-
         <h3>Main Effects:</h3>
         <ul>
           <li><strong>Energizing and uplifting:</strong> Promotes positivity, motivation, and balance.</li>
@@ -140,7 +151,6 @@
           <li><strong>Immune support:</strong> Contains antioxidants (limonene) that strengthen the immune system.</li>
           <li><strong>Soothing and relaxing:</strong> Reduces stress while maintaining energy.</li>
         </ul>
-
         <h3>Common Uses:</h3>
         <ul>
           <li><strong>Aromatically:</strong> Diffuse or inhale directly for a mood boost.</li>
@@ -148,7 +158,6 @@
           <li><strong>Internally:</strong> Add 1–2 drops to water or food for flavor and detox support.</li>
           <li><strong>Household:</strong> Mix with water to clean surfaces and freshen air.</li>
         </ul>
-
         <h3>Caution:</h3>
         <ul>
           <li>Avoid sunlight or UV for 12h after topical use (photosensitive).</li>
@@ -169,14 +178,12 @@
           <li>Calms occasional stomach discomfort.</li>
           <li>Soothes nausea and travel sickness.</li>
         </ul>
-
         <h3>Common Uses:</h3>
         <ul>
           <li><strong>Aromatically:</strong> Inhale after meals for digestive comfort.</li>
           <li><strong>Topically:</strong> Massage on abdomen with carrier oil.</li>
           <li><strong>Internally:</strong> Add 1 drop to water or tea after a heavy meal.</li>
         </ul>
-
         <h3>Caution:</h3>
         <ul>
           <li>Use diluted for sensitive skin.</li>
@@ -199,14 +206,12 @@
           <li>Purifies and refreshes air.</li>
           <li>Uplifts mood and promotes clear thinking.</li>
         </ul>
-
         <h3>Common Uses:</h3>
         <ul>
           <li><strong>Aromatically:</strong> Diffuse outdoors to keep insects away.</li>
           <li><strong>Topically:</strong> Apply diluted before spending time outside.</li>
           <li><strong>Household:</strong> Add to cleaning solutions for freshness.</li>
         </ul>
-
         <h3>Caution:</h3>
         <ul>
           <li>Always dilute before topical use.</li>
@@ -227,14 +232,12 @@
           <li>Relieves tension and clears airways.</li>
           <li>Cools and soothes the body.</li>
         </ul>
-
         <h3>Common Uses:</h3>
         <ul>
           <li><strong>Aromatically:</strong> Inhale to wake up or feel alert.</li>
           <li><strong>Topically:</strong> Apply to temples, neck, or chest with carrier oil.</li>
           <li><strong>Internally:</strong> Add a drop to tea or water for digestive support.</li>
         </ul>
-
         <h3>Caution:</h3>
         <ul>
           <li>Keep away from eyes.</li>
@@ -257,14 +260,12 @@
           <li>Supports restful sleep.</li>
           <li>Soothes skin and minor irritations.</li>
         </ul>
-
         <h3>Common Uses:</h3>
         <ul>
           <li><strong>Aromatically:</strong> Diffuse before bed for better sleep.</li>
           <li><strong>Topically:</strong> Apply to temples, neck, or irritated skin areas.</li>
           <li><strong>Household:</strong> Add to laundry or pillows for a calming scent.</li>
         </ul>
-
         <h3>Caution:</h3>
         <ul>
           <li>Use diluted for sensitive skin.</li>
@@ -282,82 +283,4 @@
         <ul>
           <li>Purifies air and surfaces.</li>
           <li>Supports skin health and clarity.</li>
-          <li>Promotes a clean, refreshed feeling.</li>
-        </ul>
-
-        <h3>Common Uses:</h3>
-        <ul>
-          <li><strong>Topically:</strong> Apply diluted to blemishes or scalp.</li>
-          <li><strong>Household:</strong> Add to cleaning sprays for antibacterial effect.</li>
-          <li><strong>Aromatically:</strong> Diffuse to cleanse the air.</li>
-        </ul>
-
-        <h3>Caution:</h3>
-        <ul>
-          <li>For external use only.</li>
-          <li>Keep away from children and eyes.</li>
-        </ul>
-      </div>
-      <div class="oil-image"><img src="images/tea-tree.jpg" alt="Tea Tree"></div>
-    </div>
-  </section>
-
-  <!-- 7: OnGuard -->
-  <section class="blue-block">
-    <div class="content">
-      <div class="oil-image"><img src="images/onguard.jpg" alt="OnGuard"></div>
-      <div class="oil-text">
-        <h2>OnGuard</h2>
-        <h3>Main Effects:</h3>
-        <ul>
-          <li>Strengthens immune defenses.</li>
-          <li>Protects against seasonal threats.</li>
-          <li>Purifies air and surfaces.</li>
-        </ul>
-
-        <h3>Common Uses:</h3>
-        <ul>
-          <li><strong>Aromatically:</strong> Diffuse to cleanse the air.</li>
-          <li><strong>Topically:</strong> Apply diluted to soles of feet for protection.</li>
-          <li><strong>Household:</strong> Add to surface cleaner for disinfection.</li>
-        </ul>
-
-        <h3>Caution:</h3>
-        <ul>
-          <li>Use diluted on skin.</li>
-          <li>Avoid contact with eyes or sensitive areas.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8: Air -->
-  <section>
-    <div class="content">
-      <div class="oil-text">
-        <h2>Air</h2>
-        <h3>Main Effects:</h3>
-        <ul>
-          <li>Supports clear breathing and sinus relief.</li>
-          <li>Invigorates and cools body and mind.</li>
-          <li>Helps open airways naturally.</li>
-        </ul>
-
-        <h3>Common Uses:</h3>
-        <ul>
-          <li><strong>Aromatically:</strong> Diffuse for clear breathing and freshness.</li>
-          <li><strong>Topically:</strong> Rub on chest or back with carrier oil.</li>
-          <li><strong>Inhalation:</strong> Inhale directly before exercise or sleep.</li>
-        </ul>
-
-        <h3>Caution:</h3>
-        <ul>
-          <li>Keep away from eyes and mucous membranes.</li>
-        </ul>
-      </div>
-      <div class="oil-image"><img src="images/air.jpg" alt="Air"></div>
-    </div>
-  </section>
-
-</body>
-</html>
+         
