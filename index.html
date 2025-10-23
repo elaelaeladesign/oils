@@ -15,27 +15,31 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 60px; /* falls dein Header später fixiert wird */
+  scroll-padding-top: 40px; /* falls dein Header später fixiert wird */
 }
 
 
 
 
 
+/* Button-Block: gleiche Breite & Zentrierung wie die blauen Blöcke */
 .oil-links {
+  width: 80%;            /* gleiche Breite wie .blue-block */
+  margin: 2.5rem auto;   /* zentriert auf der Seite */
   display: flex;
   justify-content: center;
-  margin: 3rem 0;
 }
 
+/* Innere Buttons-Gruppe */
 .oil-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  max-width: 900px;
+  max-width: 100%;       /* Buttons dürfen die 80% nicht überschreiten */
 }
 
+/* Button-Styling */
 .oil-buttons a {
   background-color: #9e7866;
   color: #fff;
@@ -44,21 +48,32 @@ html {
   border-radius: 20px;
   font-size: 1rem;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
+  display: inline-block;
 }
 
+/* Hover */
 .oil-buttons a:hover {
   background-color: #2f3954;
   color: #f0e0d1;
   transform: translateY(-2px);
 }
 
+/* Responsive: kleinere Buttons & voller Bereich auf sehr kleinen Bildschirmen */
 @media (max-width: 768px) {
+  .oil-links {
+    width: 95%;
+  }
   .oil-buttons a {
-    padding: 0.7rem 1.4rem;
+    padding: 0.65rem 1.1rem;
     font-size: 0.95rem;
   }
 }
+
+
+
+
+
 
 
 
@@ -294,9 +309,8 @@ strong {
   </section>
 
   <!-- 2: ZenGest -->
- <section id="zengest">
-  <div  class="content">
-    <div class="oil-image"><img src="images/zengest.jpg" alt="ZenGest"></div>
+<section id="zengest">
+  <div class="content">
     <div class="oil-text">
       <h2>ZenGest</h2>
       <h3>Main Effects:</h3>
@@ -327,8 +341,10 @@ strong {
         <li>Keep away from eyes and mucous membranes.</li>
       </ul>
     </div>
+    <div class="oil-image"><img src="images/zengest.jpg" alt="ZenGest"></div>
   </div>
 </section>
+
 
 
   <!-- 3: Citronella -->
