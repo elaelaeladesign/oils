@@ -234,6 +234,29 @@ strong {
         order: -1;
       }
     }
+
+
+
+
+
+/* Scroll-Effekt: Startzustand (unsichtbar, leicht nach unten versetzt) */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+/* Sobald sichtbar */
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
   </style>
 </head>
 <body>
@@ -536,6 +559,29 @@ strong {
     <div class="oil-image"><img src="images/air.jpg" alt="Air"></div>
   </div>
 </section>
+
+
+
+
+
+<script>
+  const sections = document.querySelectorAll('section');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => {
+    section.classList.add('fade-in-section');
+    observer.observe(section);
+  });
+</script>
+
+
 
 </body>
 </html>
