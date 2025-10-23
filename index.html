@@ -13,6 +13,39 @@
       --accent: #f3af52;
     }
 
+.intro-section {
+  width: 80%;
+  margin: 4rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.intro-image img {
+  width: 250px;
+  border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
+}
+
+.intro-text {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2f3954;
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: left;
+    width: 90%;
+  }
+  .intro-image img {
+    width: 200px;
+  }
+}
+
+
     body {
       margin: 0;
       background-color: var(--bg-main);
@@ -21,6 +54,7 @@
       color: #2f3954;
       line-height: 1.6;
     }
+
 strong {
   font-weight: 600; /* Deutlich kräftiger, aber nicht zu fett */
 }
@@ -82,7 +116,7 @@ strong {
     }
 
     /* Organisch unterschiedliche Rundungen */
-    .oil-image img:nth-of-type(1) { border-radius: 50% 30% 60% 40% / 45% 50% 55% 50%; }
+    .oil-image img:nth-of-type(1) { border-radius: 50% 60% 70% 39% / 60% 50% 55% 49%; }
     .oil-image img:nth-of-type(2) { border-radius: 35% 55% 40% 60% / 50% 45% 50% 55%; }
     .oil-image img:nth-of-type(3) { border-radius: 60% 40% 50% 50% / 50% 55% 45% 50%; }
     .oil-image img:nth-of-type(4) { border-radius: 45% 55% 60% 40% / 50% 50% 50% 50%; }
@@ -140,6 +174,30 @@ strong {
 
   <img src="images/blatt.svg" alt="Leaf Graphic" class="top-graphic">
   <h1>Essential Oils – doTERRA Guide</h1>
+<section class="intro-section">
+  <div class="intro-content">
+    <div class="intro-image">
+      <img src="images/top-grafik.png" alt="Essential Oils Introduction">
+    </div>
+    <div class="intro-text">
+      <p>
+        These small essential oil bottles are your travel-sized companions — only <strong>2ml each</strong>, but still
+        powerful in every drop. Because they’re so concentrated, remember: <strong>one tap on the bottom of the bottle
+        equals about half a drop.</strong>
+      </p>
+      <p>
+        For internal use, add <strong>1 drop to a large glass of water</strong>, or <strong>2–3 drops per liter</strong>
+        if you’re mixing a bottle.
+      </p>
+      <p>
+        For a simple aromatic boost, create your own <strong>“aroma bowl”</strong>: put 1–2 drops in your hands, rub them
+        together gently, cup your hands over your face, and breathe in deeply. Hold for 10–15 seconds, then exhale slowly
+        — feel the oils ground and uplift you.
+      </p>
+    </div>
+  </div>
+</section>
+
 
   <!-- 1: Wild Orange -->
   <section class="blue-block">
@@ -341,6 +399,17 @@ strong {
         <li><strong>Topically:</strong> Dilute and apply to chest, neck, or bottoms of feet.</li>
         <li><strong>Household:</strong> Add to cleaning solutions to disinfect naturally.</li>
       </ul>
+
+<p>
+  A blend you might really enjoy — even in the kitchen. Try <strong>apple slices in water with one drop</strong> for a
+  naturally spiced, cozy flavor — a touch of Christmas in a glass.  
+  Because of the <strong>clove content</strong>, this blend is also great for <strong>mouth, teeth, and throat</strong>.
+  Use it as a gentle <strong>mouthwash or gargle</strong> when your throat feels sore.
+</p>
+
+
+
+
       <h3>Caution:</h3>
       <ul>
         <li>Use diluted for sensitive skin.</li>
