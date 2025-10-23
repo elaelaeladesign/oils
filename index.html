@@ -13,10 +13,18 @@
       --accent: #f3af52;
     }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px; /* falls dein Header später fixiert wird */
+}
+
+
+
 
 
 .oil-links {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin: 3rem 0;
 }
 
@@ -25,6 +33,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  max-width: 900px;
 }
 
 .oil-buttons a {
@@ -50,6 +59,7 @@
     font-size: 0.95rem;
   }
 }
+
 
 
 
@@ -284,8 +294,8 @@ strong {
   </section>
 
   <!-- 2: ZenGest -->
- <section>
-  <div class="content">
+ <section id="zengest">
+  <div  class="content">
     <div class="oil-image"><img src="images/zengest.jpg" alt="ZenGest"></div>
     <div class="oil-text">
       <h2>ZenGest</h2>
@@ -322,7 +332,7 @@ strong {
 
 
   <!-- 3: Citronella -->
-  <section class="blue-block">
+  <section id="citronella" class="blue-block">
     <div class="content">
       <div class="oil-image"><img src="images/citronella.jpg" alt="Citronella"></div>
       <div class="oil-text">
@@ -349,7 +359,7 @@ strong {
   </section>
 
   <!-- 4: Peppermint -->
-  <section>
+  <section id="peppermint" >
     <div class="content">
       <div class="oil-text">
         <h2>Peppermint</h2>
@@ -376,7 +386,7 @@ strong {
   </section>
 
   <!-- 5: Lavender -->
-  <section class="blue-block">
+  <section id="lavender" class="blue-block">
     <div class="content">
       <div class="oil-image"><img src="images/lavender.jpg" alt="Lavender"></div>
       <div class="oil-text">
@@ -402,7 +412,7 @@ strong {
   </section>
 
   <!-- 6: Tea Tree -->
-  <section>
+  <section id="teatree" >
     <div class="content">
       <div class="oil-text">
         <h2>Tea Tree</h2>
@@ -429,7 +439,7 @@ strong {
   </section>
 
   <!-- 7: OnGuard -->
-  <section class="blue-block">
+  <section id="onguard" class="blue-block">
   <div class="content">
     <div class="oil-image"><img src="images/onguard.jpg" alt="OnGuard"></div>
     <div class="oil-text">
@@ -476,8 +486,8 @@ strong {
 
 
   <!-- 8: Air -->
-  <section>
-  <div class="content">
+  <section id="air">
+  <div  class="content">
     <div class="oil-text">
       <h2>Air</h2>
       <h3>Main Effects:</h3>
