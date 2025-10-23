@@ -13,6 +13,48 @@
       --accent: #f3af52;
     }
 
+
+
+.oil-links {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.oil-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.oil-buttons a {
+  background-color: #9e7866;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.oil-buttons a:hover {
+  background-color: #2f3954;
+  color: #f0e0d1;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .oil-buttons a {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.95rem;
+  }
+}
+
+
+
+
+
 .intro-section {
   display: flex;
   align-items: center;
@@ -196,9 +238,24 @@ strong {
 </section>
 
 
+<section class="oil-links">
+  <div class="oil-buttons">
+    <a href="#wildorange">Wild Orange</a>
+    <a href="#zengest">ZenGest</a>
+    <a href="#citronella">Citronella</a>
+    <a href="#peppermint">Peppermint</a>
+    <a href="#lavender">Lavender</a>
+    <a href="#teatree">Tea Tree</a>
+    <a href="#onguard">OnGuard</a>
+    <a href="#air">Air</a>
+  </div>
+</section>
+
+
+
 
   <!-- 1: Wild Orange -->
-  <section class="blue-block">
+  <section  id="wildorange" class="blue-block">
     <div class="content">
       <div class="oil-image"><img src="images/wild-orange.jpg" alt="Wild Orange"></div>
       <div class="oil-text">
