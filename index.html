@@ -43,7 +43,23 @@ h1 {
   font-size: 3.5rem;
   color: #2f3954;
   margin-bottom: 3rem;
-  line-height: 1.2; /* vorher evtl. 1.3–1.4, jetzt enger */
+  line-height: 1.1;
+  white-space: nowrap; /* Desktop: alles in einer Zeile */
+}
+
+.break-mobile {
+  white-space: normal; /* Standard auf Desktop */
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  h1 {
+    white-space: normal; /* erlaubt Zeilenumbruch */
+  }
+  .break-mobile::before {
+    content: "\A"; /* erzwingt Umbruch vor „of Wellness“ */
+    white-space: pre;
+  }
 }
 
 .top-graphic {
@@ -267,7 +283,7 @@ padding-bottom:  5rem;
 <body>
 
   <img src="images/blatt.svg" alt="Leaf Graphic" class="top-graphic">
-  <h1>Nature’s Drops of Wellness</h1>
+  <h1>Nature’s Drops <span class="break-mobile">of Wellness</span></h1>
 
 <section class="intro-section">
   <div class="intro-image">
