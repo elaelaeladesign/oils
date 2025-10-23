@@ -8,79 +8,50 @@
 <link rel="icon" type="image/svg+xml" href="images/blatt.svg">
 
   <style>
-    :root {
-      --bg-main: #f0e0d1;
-      --blue: #2f3954;
-      --accent: #f3af52;
-    }
+    
+  :root {
+  --bg-main: #f0e0d1;
+  --blue: #2f3954;
+  --accent: #f3af52;
+  --button: #9e7866;
+}
 
+/* Allgemein */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 40px; /* falls dein Header später fixiert wird */
+  scroll-padding-top: 40px;
 }
 
-
-
-
-
-/* Button-Block: gleiche Breite & Zentrierung wie die blauen Blöcke */
-.oil-links {
-  width: 80%;            /* gleiche Breite wie .blue-block */
-  margin: 2.5rem auto;   /* zentriert auf der Seite */
-  display: flex;
-  justify-content: center;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #2f3954;
+  line-height: 1.6;
+  overflow-x: hidden; /* verhindert horizontal scroll */
 }
 
-/* Innere Buttons-Gruppe */
-.oil-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  max-width: 100%;       /* Buttons dürfen die 80% nicht überschreiten */
+strong {
+  font-weight: 600;
 }
 
-/* Button-Styling */
-.oil-buttons a {
-  background-color: #9e7866;
-  color: #fff;
-  text-decoration: none;
-  padding: 0.8rem 1.6rem;
-  border-radius: 20px;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: all 0.25s ease;
-  display: inline-block;
+h1 {
+  text-align: center;
+  font-family: "Annie Use Your Telescope", cursive;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  color: #2f3954;
 }
 
-/* Hover */
-.oil-buttons a:hover {
-  background-color: #2f3954;
-  color: #f0e0d1;
-  transform: translateY(-2px);
+.top-graphic {
+  display: block;
+  width: 200px;
+  margin: 3rem auto 1.5rem auto;
 }
 
-/* Responsive: kleinere Buttons & voller Bereich auf sehr kleinen Bildschirmen */
-@media (max-width: 768px) {
-  .oil-links {
-    width: 95%;
-  }
-  .oil-buttons a {
-    padding: 0.65rem 1.1rem;
-    font-size: 0.95rem;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
+/* Intro-Bereich */
 .intro-section {
   display: flex;
   align-items: center;
@@ -93,6 +64,7 @@ html {
 .intro-image img {
   width: 380px;
   max-width: 100%;
+  display: block;
 }
 
 .intro-text {
@@ -106,6 +78,131 @@ html {
   margin-top: 1.2rem;
 }
 
+/* Buttons */
+.oil-links {
+  width: 80%;
+  margin: 2.5rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.oil-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 100%;
+}
+
+.oil-buttons a {
+  background-color: var(--button);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+.oil-buttons a:hover {
+  background-color: var(--blue);
+  color: #f0e0d1;
+  transform: translateY(-2px);
+}
+
+/* Sektionen */
+section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+.blue-block {
+  background-color: var(--blue);
+  border-radius: 20px;
+  width: 80%;
+  color: #ffffff;
+  padding: 3rem 2rem;
+  margin: 2rem auto;
+  box-sizing: border-box;
+}
+
+/* Inhalt in jedem Öl-Block */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.oil-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.oil-image img {
+  width: 100%;
+  max-width: 300px;
+  object-fit: cover;
+  border-radius: 50% 60% 70% 39% / 60% 50% 55% 49%;
+  display: block;
+}
+
+.oil-text {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.oil-text h2 {
+  font-family: "Annie Use Your Telescope", cursive;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.oil-text h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.oil-text ul {
+  margin: 0.5rem 0 1rem 1.2rem;
+  padding-left: 1rem;
+}
+
+.oil-text li {
+  margin-bottom: 0.4rem;
+}
+
+/* Scroll-Effekt */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Anpassungen */
 @media (max-width: 900px) {
   .intro-section {
     flex-direction: column;
@@ -119,144 +216,32 @@ html {
   }
 }
 
+@media (max-width: 768px) {
+  section,
+  .blue-block {
+    width: 95%;
+    padding: 2rem 1rem;
+  }
 
+  .content {
+    flex-direction: column;
+    text-align: left;
+    gap: 3rem;
+  }
 
-    body {
-      margin: 0;
-      background-color: var(--bg-main);
-      font-family: "Poppins", sans-serif;
- font-weight: 300; /* Light für Fließtext */
-      color: #2f3954;
-      line-height: 1.6;
-    }
+  .oil-image {
+    order: -1;
+  }
 
-strong {
-  font-weight: 600; /* Deutlich kräftiger, aber nicht zu fett */
+  .oil-buttons a {
+    padding: 0.65rem 1.1rem;
+    font-size: 0.95rem;
+  }
+
+  .oil-links {
+    width: 95%;
+  }
 }
-
-    .top-graphic {
-      display: block;
-      width: 200px;
-      margin: 3rem auto 1.5rem auto;
-    }
-
-    h1 {
-      text-align: center;
-      font-family: "Annie Use Your Telescope", cursive;
-      font-size: 3.5rem;
-      color: #2f3954;
-      margin-bottom: 3rem;
-    }
-
-    section {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding: 3rem 1.5rem;
-      margin: 2rem auto;
-      max-width: 1200px;
-    }
-
-    .blue-block {
-      background-color: var(--blue);
-      border-radius: 80px;
-      width: 80%;
-      color: #ffffff;
-      padding: 3rem 2rem;
-      margin: 2rem auto;
-    }
-
-    .content {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: center;
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .oil-image {
-      flex: 1 1 300px;
-      max-width: 400px;
-      text-align: center;
-    }
-
-   .oil-image img {
-  width: 100%;
-  max-width: 300px;
-  object-fit: cover;
-  border-radius: 50% 60% 70% 39% / 60% 50% 55% 49%;
-}
- 
-
-    .oil-text {
-      flex: 1 1 400px;
-      max-width: 500px;
-    }
-
-    .oil-text h2 {
-      font-family: "Annie Use Your Telescope", cursive;
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .oil-text h3 {
-      font-family: "Poppins", sans-serif;
-      font-size: 1.2rem;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: var(--accent);
-    }
-
-    .oil-text ul {
-      margin: 0.5rem 0 1rem 1.2rem;
-      padding-left: 1rem;
-    }
-
-    .oil-text li {
-      margin-bottom: 0.4rem;
-    }
-
-    @media (max-width: 768px) {
-      section,
-      .blue-block {
-        width: 95%;
-        padding: 3rem 2rem;
-      }
-      .content {
-        flex-direction: column;
-        text-align: left;
-        gap: 3rem;
-      }
-      .oil-image {
-        order: -1;
-      }
-    }
-
-
-
-
-
-/* Scroll-Effekt: Startzustand (unsichtbar, leicht nach unten versetzt) */
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  will-change: opacity, transform;
-}
-
-/* Sobald sichtbar */
-.fade-in-section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-
-
 
   </style>
 </head>
