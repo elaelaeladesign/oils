@@ -65,6 +65,7 @@ h1 {
   width: 380px;
   max-width: 100%;
   display: block;
+  margin: 0 auto;
 }
 
 .intro-text {
@@ -72,10 +73,6 @@ h1 {
   font-size: 1.1rem;
   line-height: 1.9;
   color: #2f3954;
-}
-
-.intro-text p + p {
-  margin-top: 1.2rem;
 }
 
 /* Buttons */
@@ -127,7 +124,7 @@ section {
 
 .blue-block {
   background-color: var(--blue);
-  border-radius: 80px;
+  border-radius: 80px; /* angepasst */
   width: 80%;
   color: #ffffff;
   padding: 3rem 2rem;
@@ -157,7 +154,7 @@ section {
   width: 100%;
   max-width: 300px;
   object-fit: cover;
-  border-radius: 50% 60% 70% 39% / 60% 50% 55% 49%;
+  border-radius: 50% 60% 70% 39% / 60% 50% 55% 49%; /* organisch */
   display: block;
 }
 
@@ -206,9 +203,11 @@ section {
 @media (max-width: 900px) {
   .intro-section {
     flex-direction: column;
-    text-align: left;
+    text-align: center;
     width: 90%;
     gap: 2.5rem;
+    padding-top: 6rem;  /* mehr Luft oben */
+    padding-bottom: 6rem; /* mehr Luft unten */
   }
 
   .intro-image img {
@@ -220,17 +219,27 @@ section {
   section,
   .blue-block {
     width: 95%;
-    padding: 2rem 1rem;
+    padding: 5rem 1rem; /* mehr Luft oben und unten */
   }
 
   .content {
     flex-direction: column;
-    text-align: left;
+    text-align: center; /* Text zentrieren */
     gap: 3rem;
   }
 
   .oil-image {
     order: -1;
+    max-width: 90%;
+    margin: 0 auto; /* Bild zentrieren */
+  }
+
+  .oil-text {
+    text-align: center; /* Text unter Bild zentrieren */
+  }
+
+  .intro-section {
+    gap: 3.5rem; /* Abstand zwischen Bild und Text */
   }
 
   .oil-buttons a {
@@ -242,6 +251,7 @@ section {
     width: 95%;
   }
 }
+
 
   </style>
 </head>
